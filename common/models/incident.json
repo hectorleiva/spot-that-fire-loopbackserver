@@ -1,0 +1,54 @@
+{
+  "name": "incident",
+  "plural": "incidents",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "geolocation": {
+      "type": "geopoint",
+      "required": true
+    },
+    "geolocationAccuracy": {
+      "type": "number",
+      "required": true
+    },
+    "geolocationTimestamp": {
+      "type": "number",
+      "required": true
+    },
+    "altitude": {
+      "type": "number"
+    },
+    "altitudeAccuracy": {
+      "type": "number"
+    },
+    "heading": {
+      "type": "number"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    },
+    "media": {
+      "type": "string",
+      "required": true
+    },
+    "format": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

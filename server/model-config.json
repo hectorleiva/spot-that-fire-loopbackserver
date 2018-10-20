@@ -37,5 +37,9 @@
   },
   "Message": {
     "dataSource": null
+  },
+  "incident": {
+    "dataSource": "db",
+    "public": true
   }
 }
