@@ -1,0 +1,54 @@
+{
+  "name": "subscription",
+  "plural": "subscriptions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "postalCode": {
+      "type": "number",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "preference": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "default": [
+        "email"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "",
+      "options": {
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

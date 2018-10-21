@@ -41,5 +41,13 @@
   "incident": {
     "dataSource": "db",
     "public": true
+  },
+  "subscription": {
+    "dataSource": "db",
+    "public": true
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
   }
 }
